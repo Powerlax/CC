@@ -2,6 +2,7 @@ import pyautogui
 import win32clipboard
 import keyboard
 from pynput.keyboard import Controller
+import time
 
 def main(): 
     question_pos = getPos("ctrl")
@@ -9,6 +10,7 @@ def main():
     translation_dict = ripTextFile()
     while True:
         question = getQuestion(question_pos)
+        print(question)
         answerQuestion(field_pos, translation_dict.get(question))
 
 def getPos(marker_key):
@@ -26,6 +28,7 @@ def getQuestion(pos):
     pyautogui.hotkey("ctrl", "c")
     win32clipboard.OpenClipboard()
     data = win32clipboard.GetClipboardData()
+    time.sleep(1)
     win32clipboard.CloseClipboard()
     return data
 
@@ -45,3 +48,4 @@ def ripTextFile():
     f.close()
     return translation_dict
 
+main()
