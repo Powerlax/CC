@@ -1,14 +1,15 @@
 import pyautogui
-import win32clipboard
 import keyboard
 from pynput.keyboard import Controller
 import time
+import pyperclip
 
 def main(): 
     question_pos = getPos("ctrl")
     field_pos = getPos("q")
     translation_dict = ripTextFile()
     while True:
+        time.sleep(1)
         question = getQuestion(question_pos)
         print(question)
         answerQuestion(field_pos, translation_dict.get(question))
@@ -26,11 +27,7 @@ def getQuestion(pos):
     pyautogui.click()
     pyautogui.click()
     pyautogui.hotkey("ctrl", "c")
-    win32clipboard.OpenClipboard()
-    data = win32clipboard.GetClipboardData()
-    time.sleep(1)
-    win32clipboard.CloseClipboard()
-    return data
+    return pyperclip.paste()
 
 def answerQuestion(pos, answer):
     pyautogui.moveTo(pos[0], pos[1])
