@@ -27,7 +27,7 @@ def getPre(conj_pos):
     pyautogui.click()
     pyautogui.hotkey("ctrl", "c")
     time.sleep(1)
-    res = pyperclip.paste()
+    res = pyperclip.paste().strip()
     print(res)
     if " y " in res:
         if "yo" in res:
@@ -40,8 +40,7 @@ def getPre(conj_pos):
         return 1
     elif res == "ustedes":
         return 4
-    else:
-        return 2
+    return 2
 
 
 def answer(question_pos, field_pos, random, conj, conj_pos):
@@ -53,7 +52,10 @@ def answer(question_pos, field_pos, random, conj, conj_pos):
     pyautogui.click()
     save = pyperclip.paste()
     print(save)
-    word = conj.get(save)[getPre(conj_pos)]
+    try:
+        word = conj.get(save)[getPre(conj_pos)]
+    except:
+        word = conj.get(save)[getPre(conj_pos)]
     pyautogui.moveTo(field_pos[0], field_pos[1])
     pyautogui.click()
     pyautogui.keyDown("backspace")
