@@ -25,16 +25,19 @@ def getPre(conj_pos):
     pyautogui.moveTo(conj_pos[0], conj_pos[1])
     pyautogui.click()
     pyautogui.click()
+    pyautogui.click()
     pyautogui.hotkey("ctrl", "c")
     time.sleep(1)
     res = pyperclip.paste().strip()
     print(res)
+    print(res == "yo")
     if " y " in res:
         if "yo" in res:
             return 3
         else:
             return 4
     if res == "yo":
+        print("hi")
         return 0
     elif res == "tú":
         return 1
@@ -53,8 +56,14 @@ def answer(question_pos, field_pos, random, conj, conj_pos):
     save = pyperclip.paste()
     print(save)
     try:
-        word = conj.get(save)[getPre(conj_pos)]
+        index = getPre(conj_pos)
+        print("is index check")
+        print(index == 0)
+        print(type(conj.get(save)))
+        word = conj.get(save)[index]
     except:
+        pyautogui.moveTo(random[0], random[1])
+        pyautogui.click()
         word = conj.get(save)[getPre(conj_pos)]
     pyautogui.moveTo(field_pos[0], field_pos[1])
     pyautogui.click()
