@@ -28,6 +28,7 @@ def getQuestion(pos):
         pyautogui.click()
         pyautogui.click()
         pyautogui.hotkey("ctrl", "c")
+        time.sleep(0.5)
         win32clipboard.OpenClipboard()
         data = win32clipboard.GetClipboardData()
         win32clipboard.CloseClipboard()
@@ -46,9 +47,9 @@ def answerQuestion(pos, answer):
 def ripTextFile():
     translation_dict = {}
     f = open("thing.txt", "r", encoding="UTF-8")
-    for line in f:
-        key, value = line.split('\t')
-        translation_dict[key.split('. ')[1].strip()] = value.split('. ')[1].strip()
+    lines = f.readlines()
+    for i in range (0, len(lines), 3):
+        translation_dict[lines[i].split('. ')[1].strip()] = lines[i+1].split('. ')[1].strip()
     f.close()
     return translation_dict
 
