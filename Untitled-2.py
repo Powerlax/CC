@@ -6,7 +6,7 @@ def convert_conjugations(input_file):
     temp = ""
     for line in lines:
         if "|" in line:
-            output_lines.append(line.split(" | ")[0].strip())
+            output_lines.append(line.split(" | ")[1].strip())
             continue
         parts = line.split("\t")
         print(parts)
