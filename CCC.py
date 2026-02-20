@@ -8,11 +8,15 @@ def main():
     question_pos = getPos("ctrl")
     field_pos = getPos("q")
     r = getPos("w")
-    conj_pos = getPos("a")
+    conj_pos = getPos("r")
     emotion_pos = getPos("s")
     conj = ripTextFile()
     while True:
-        answer(question_pos, field_pos, r, conj, conj_pos, emotion_pos)
+        try:
+            answer(question_pos, field_pos, r, conj, conj_pos, emotion_pos)
+        except Exception as e:
+            x = 1
+            continue
 
 def getPos(marker_key):
     while True:
@@ -28,7 +32,7 @@ def copy_from_pos(pos):
     pyautogui.click()
     pyautogui.click()
     pyautogui.hotkey("ctrl", "c")
-    time.sleep(0.2)
+    time.sleep(1)
     return pyperclip.paste().strip()
 
 
@@ -72,6 +76,8 @@ def answer(question_pos, field_pos, random, conj, conj_pos, emotion_pos):
         emotion_index = get_emotion_index(emotion_pos)
         index = subject_index * 2 + emotion_index
         print("is index check")
+        print(subject_index)
+        print(emotion_index)
         print(index == 0)
         print(type(conj.get(save)))
         word = conj.get(save)[index]
@@ -89,7 +95,7 @@ def answer(question_pos, field_pos, random, conj, conj_pos, emotion_pos):
     Controller().type(word)
     pyautogui.keyDown("enter")
     pyautogui.keyUp("enter")
-    time.sleep(1)
+    time.sleep(3)
 
 def ripTextFile():
     conj = {}

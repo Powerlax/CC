@@ -61,7 +61,7 @@ def convert_conjugations(input_file):
     return output_lines
 
 def write_output(output_file, output_lines):
-    with open(output_file, 'w') as file:
+    with open(output_file, 'w', encoding='UTF-8') as file:
         for line in output_lines:
             file.write(line + '\n')
 
