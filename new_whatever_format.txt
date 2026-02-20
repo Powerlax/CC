@@ -1,0 +1,143 @@
+beber
+to drink
+
+POSITIVE	NEGATIVE
+tú	bebe	no bebas
+usted	beba	no beba
+nosotros	bebamos	no bebamos
+ustedes	beban	no beban
+
+colocar
+to place
+
+POSITIVE	NEGATIVE
+tú	coloca	no coloques
+usted	coloque	no coloque
+nosotros	coloquemos	no coloquemos
+ustedes	coloquen	no coloquen
+
+comer
+to eat
+
+POSITIVE	NEGATIVE
+tú	come	no comas
+usted	coma	no coma
+nosotros	comamos	no comamos
+ustedes	coman	no coman
+
+correr
+to run
+
+POSITIVE	NEGATIVE
+tú	corre	no corras
+usted	corra	no corra
+nosotros	corramos	no corramos
+ustedes	corran	no corran
+
+dar
+to give
+
+POSITIVE	NEGATIVE
+tú	da	no des
+usted	dé	no dé
+nosotros	demos	no demos
+ustedes	den	no den
+
+decir
+to say
+
+POSITIVE	NEGATIVE
+tú	di	no digas
+usted	diga	no diga
+nosotros	digamos	no digamos
+ustedes	digan	no digan
+
+hacer
+to do/to make
+
+POSITIVE	NEGATIVE
+tú	haz	no hagas
+usted	haga	no haga
+nosotros	hagamos	no hagamos
+ustedes	hagan	no hagan
+
+ir
+to go
+
+POSITIVE	NEGATIVE
+tú	ve	no vayas
+usted	vaya	no vaya
+nosotros	vayamos	no vayamos
+ustedes	vayan	no vayan
+
+poner
+to put
+
+POSITIVE	NEGATIVE
+tú	pon	no pongas
+usted	ponga	no ponga
+nosotros	pongamos	no pongamos
+ustedes	pongan	no pongan
+
+sacar
+to take out
+
+POSITIVE	NEGATIVE
+tú	saca	no saques
+usted	saque	no saque
+nosotros	saquemos	no saquemos
+ustedes	saquen	no saquen
+
+salir
+to depart
+
+POSITIVE	NEGATIVE
+tú	sal	no salgas
+usted	salga	no salga
+nosotros	salgamos	no salgamos
+ustedes	salgan	no salgan
+
+ser
+to be (permanent)
+
+POSITIVE	NEGATIVE
+tú	sé	no seas
+usted	sea	no sea
+nosotros	seamos	no seamos
+ustedes	sean	no sean
+
+tener
+to have
+
+POSITIVE	NEGATIVE
+tú	ten	no tengas
+usted	tenga	no tenga
+nosotros	tengamos	no tengamos
+ustedes	tengan	no tengan
+
+tomar
+to take/to drink
+
+POSITIVE	NEGATIVE
+tú	toma	no tomes
+usted	tome	no tome
+nosotros	tomemos	no tomemos
+ustedes	tomen	no tomen
+
+usar
+to use
+
+POSITIVE	NEGATIVE
+tú	usa	no uses
+usted	use	no use
+nosotros	usemos	no usemos
+ustedes	usen	no usen
+
+ver
+to see
+
+POSITIVE	NEGATIVE
+tú	ve	no veas
+usted	vea	no vea
+nosotros	veamos	no veamos
+ustedes	vean	no vean

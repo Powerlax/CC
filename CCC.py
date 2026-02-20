@@ -9,6 +9,7 @@ def main():
     field_pos = getPos("q")
     r = getPos("w")
     conj_pos = getPos("a")
+    # you will need to create a new positive/negative (call it "emotion") pos
     conj = ripTextFile()
     while True:
         answer(question_pos, field_pos, r, conj, conj_pos)
